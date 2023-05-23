@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Goalie : MonoBehaviour
 {
-    public float delta = 1.5f;  // Amount to move left and right from the start point
+    public float delta = 1.5f;  
     public float speed = 2.0f;
     private Vector3 startPos;
 

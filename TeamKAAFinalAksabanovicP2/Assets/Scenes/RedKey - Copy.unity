@@ -749,8 +749,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 32
+  m_CollisionDetection: 1
 --- !u!114 &102882625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,6 +763,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8e2054a96fc7d44b84bd1da330bb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!75 &102882630
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102882618}
+  m_Enabled: 1
+  m_Force: {x: 1, y: 0, z: 0}
+  m_RelativeForce: {x: 1, y: 0, z: 0}
+  m_Torque: {x: 1, y: 0, z: 0}
+  m_RelativeTorque: {x: 1, y: 0, z: 0}
 --- !u!1 &121199651
 GameObject:
   m_ObjectHideFlags: 0
@@ -9457,6 +9469,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 135134225773752490, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
 --- !u!1001 &1900517810
@@ -10403,7 +10419,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6778632355985981361, guid: a9ca23b685b62e94e84d2035d0cf417d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a9ca23b685b62e94e84d2035d0cf417d, type: 3}
 --- !u!1001 &3768377779838381473
 PrefabInstance:
