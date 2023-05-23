@@ -19,6 +19,6 @@ public class Kick : MonoBehaviour
 
     void OnMouseDown()
     {
-        Destroy(gameObject);
+        Instantiate(gameObject, transform.position, gameObject.transform.rotation);
     }
 }
