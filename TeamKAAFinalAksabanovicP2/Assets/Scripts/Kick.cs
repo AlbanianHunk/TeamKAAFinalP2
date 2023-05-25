@@ -4,21 +4,16 @@ using UnityEngine;
 
 public class Kick : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
+    private Rigidbody rb;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     void OnMouseDown()
     {
-        Instantiate(gameObject, transform.position, gameObject.transform.rotation);
+        rb.AddForce(-transform.forward * 750f);
+        rb.useGravity = true;
     }
 }
