@@ -6,8 +6,11 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] ballPrefabs;
 
-    private float spawnLimitXLeft = -1;
-    private float spawnLimitXRight = 8;
+    private float spawnPosX = 8;
+    private float spawnPosY = 0;
+    private float spawnPosZ = -15;
+
+
 
     private float startDelay = 1.0f;
     private float spawnInterval = 4.0f;
@@ -22,7 +25,7 @@ public class SpawnManager : MonoBehaviour
     void SpawnRandomBall()
     {
         // Generate random ball index and random spawn position
-        Vector3 spawnPos = new Vector3(Random.Range(spawnLimitXLeft, spawnLimitXRight), 0);
+        Vector3 spawnPos = new Vector3(spawnPosX, spawnPosY, spawnPosZ);
 
         // instantiate ball at random spawn location
         int ballNumber = Random.Range(0, ballPrefabs.Length);
