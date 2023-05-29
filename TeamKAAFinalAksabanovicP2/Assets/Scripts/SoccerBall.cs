@@ -4,22 +4,10 @@ using UnityEngine;
 
 public class SoccerBall : MonoBehaviour
 {
-    private bool movingRight;
-    public float speed = 2.0f;
-    void Start()
-    {
-        movingRight = true;
-    }
+    public float speed;
+
     void Update()
     {
-        if (movingRight == true)
-        {
-            // move Right
-            if (transform.position.x <= -4) movingRight = false;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        transform.Translate(Vector3.left * speed * Time.deltaTime);
     }
 }
