@@ -28,7 +28,7 @@ public class GoalCounter : MonoBehaviour
 
         if (other.name != "Player" && m_col.isTrigger)
         {
-            playerStats.AddScore(1);
+            playerStats.AddScore(+1);
             Destroy(gameObject);
         }
     }
