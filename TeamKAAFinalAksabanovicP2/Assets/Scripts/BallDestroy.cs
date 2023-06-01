@@ -10,7 +10,7 @@ public class BallDestroy : MonoBehaviour
     }
     IEnumerator SelfDestruct()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(4f);
         Destroy(gameObject);
     }
 }

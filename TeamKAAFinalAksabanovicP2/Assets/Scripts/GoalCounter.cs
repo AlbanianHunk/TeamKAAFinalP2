@@ -4,32 +4,16 @@ using UnityEngine;
 
 public class GoalCounter : MonoBehaviour
 {
-    public int scoreValue;
-    // reference to playerstats
-    public PlayerStats playerStats;
-    // Start is called before the first frame update
-    void Start()
-    {
-        //  get playerstats fom wich ever object has it
-        playerStats = GameObject.FindObjectOfType(typeof(PlayerStats)) as PlayerStats;
-        playerStats.UpdateStats();
-    }
+    public Scoring score;
 
     // Update is called once per frame
     void Update()
     {
 
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        // get reference to collider (to find the trigger one)
-        Collider m_col = gameObject.GetComponent<Collider>();
-
-        if (other.name != "Player" && m_col.isTrigger)
+        void OnTriggerEnter(Collider collision)
         {
-            playerStats.AddScore(+1);
-            Destroy(gameObject);
+            score.AddScore(1);
         }
-    }
+    
 }
